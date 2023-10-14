@@ -1,7 +1,7 @@
 # zukijs
 JavaScript Wrapper for the zukijourney API.
 
-This repository aims to be a useful collection of JavaScript modules that make using the zukijourny API easier.
+This repository aims to be a useful collection of JavaScript modules that make using the zukijourney API easier.
 
 To use this wrapper, you only need to download the Modules folder and the package.json file (you can also just clone this repository locally or download the ZIP file).
 
