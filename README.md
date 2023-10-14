@@ -1,4 +1,4 @@
-# zukijs
+# zukiJS
 JavaScript Wrapper for the zukijourney API.
 
 This repository aims to be a useful collection of JavaScript modules that make using the zukijourney API easier.
