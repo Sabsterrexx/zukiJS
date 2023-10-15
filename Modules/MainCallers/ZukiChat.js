@@ -1,4 +1,4 @@
-import { ZukiChatCall } from "./ZukiChatCall.js";
+import { ZukiChatCall } from "../SubCallers/ZukiChatCall.js";
 
 export class ZukiChat {
 
