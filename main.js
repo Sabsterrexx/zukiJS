@@ -31,3 +31,4 @@ let res = await zukiLLM.zukiChat.sendBackupMessage("Sabs", "Hey, how's it going?
 
 console.log(res); //Response will be printed in the console.
 //To change the temperature of the model, call .zukiChat.setTemp(). The value by default is 0.7.
+//WARNING: DO NOT USE .zukiImage. It is not stable yet.
