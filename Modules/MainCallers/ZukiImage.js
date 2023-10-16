@@ -1,4 +1,4 @@
-import { ZukiImageCall } from "../SubCallers/ZukiImageCall";
+import { ZukiImageCall } from "../SubCallers/ZukiImageCall.js";
 
 export class ZukiImage {
 
