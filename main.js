@@ -25,13 +25,16 @@ let zukiAI = new ZukiCall(API_KEY);
 let chatResponse = await zukiAI.zukiChat.sendMessage("Sabs", "Hey, how's it going?"); 
 /**
  * To call the unfiltered endpoint, use .zukiChat.sendUnfilteredMessage().
- * If you have a backup API endpoint, first set it as a backup using .zukiChat.changeBackupEndpoint(),
+ * If you have a backup API endpoint, first set it as a backup using .zukiChat.changeBackupEndpoint("backup-endpoint"),
  *  then call .zukiChat.sendBackupMessage().
  */
 
 console.log("Chat Response: ", chatResponse); //Response will be printed in the console.
 //To change the temperature of the model, call .zukiChat.setTemp(). The value by default is 0.7.
 
-//Generate a image with the prompt "A grey tabby cat". The response is returned as a url to the image.
+//Generate an image with the prompt "A grey tabby cat".
 let imageUrl = await zukiAI.zukiImage.generateImage("A grey tabby cat.");
-console.log("Image Url: ", imageUrl);
+console.log("Image Url: ", imageUrl); //The response is returned as a url to the image.
+
+//Note: If you have a backup API endpoint for images too, first set it as a backup using .zukiImage.changeBackupEndpoint(),
+//then to generate an image from your backup endpoint, use .zukiImage.generateBackupImage()
