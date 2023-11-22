@@ -38,7 +38,6 @@ export class ZukiImageCall {
                 body: JSON.stringify(this.IMAGE_DATA(prompt, generations, size)),
             });
 
-            //console.log(await response.text());
             const imgUrl = await response.json(); //Main response.
 
             return imgUrl['data'][0]['url'];
