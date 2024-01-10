@@ -10,7 +10,7 @@ export class ZukiChatCall{
 
         /** 
          * Gets the actual data object being sent to the API.
-         */
+        */
 
         const data = {
             model: requestedModel, //You can change the model here.
@@ -40,7 +40,7 @@ export class ZukiChatCall{
 
         /**
          * Makes an API call via the desired enpoint.
-         */
+        */
 
         try {
 

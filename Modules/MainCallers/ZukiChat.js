@@ -2,8 +2,9 @@ import { ZukiChatCall } from "../SubCallers/ZukiChatCall.js";
 
 export class ZukiChat {
 
-    constructor(API_KEY, model = "gpt-3.5", systemPrompt = "You are a helpful assistant.", temperature = 0.7) {
+    constructor(API_KEY, API_BACKUP_KEY = "", model = "gpt-3.5", systemPrompt = "You are a helpful assistant.", temperature = 0.7) {
         this.API_KEY = API_KEY;
+        this.API_BACKUP_KEY = API_BACKUP_KEY;
         this.API_ENDPOINT = 'https://zukijourney.xyzbot.net/v1/chat/completions';
         this.API_ENDPOINT_UNFILTERED = 'https://zukijourney.xyzbot.net/unf/chat/completions';
         this.API_ENDPOINT_BACKUP = 'https://thirdparty.webraft.in/v1/chat/completions'; //A backup endpoint, if appplicable. Usually meant to utilize another API. By default it's set to the WebRaft API due to its rate limit being ideal for testing purposes.
@@ -21,6 +22,7 @@ export class ZukiChat {
         this.temperature = temperature;
 
         this.API_CALLER = new ZukiChatCall(this.API_KEY);
+        this.API_BACKUP_CALLER = new ZukiChatCall(this.API_BACKUP_KEY);
 
     }
 
@@ -88,7 +90,7 @@ export class ZukiChat {
          * Calls the backup API via the backup endpoint.
          */
         
-        return this.API_CALLER.CHAT_CALL(userName, userMessage, this.model, this.systemPrompt, this.temperature, this.API_ENDPOINT_BACKUP);
+        return this.API_BACKUP_CALLER.CHAT_CALL(userName, userMessage, this.model, this.systemPrompt, this.temperature, this.API_ENDPOINT_BACKUP);
 
     }
 
