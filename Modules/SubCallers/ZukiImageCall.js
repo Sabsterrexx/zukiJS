@@ -4,7 +4,6 @@ export class ZukiImageCall {
     constructor(API_KEY) {
 
         this.API_KEY = API_KEY;
-
     }
 
     IMAGE_DATA(prompt, generations, size) {
