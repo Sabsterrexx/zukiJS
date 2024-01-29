@@ -6,7 +6,7 @@ export class ZukiImageCall {
         this.API_KEY = API_KEY;
     }
 
-    IMAGE_DATA(prompt, generations, size) {
+    IMAGE_DATA(prompt, generations, size, model) {
 
         const data = {
 
@@ -14,7 +14,10 @@ export class ZukiImageCall {
 
             n: generations,
 
-            size: size
+            size: size,
+
+            model: model,
+
 
         };
 
@@ -23,7 +26,7 @@ export class ZukiImageCall {
 
     }
 
-    async IMAGE_CALL(prompt, generations, size, endpoint) {
+    async IMAGE_CALL(prompt, generations, size, model, endpoint) {
 
 
         try {
@@ -34,7 +37,7 @@ export class ZukiImageCall {
                     'Content-Type': 'application/json',
                     Authorization: `Bearer ${this.API_KEY}`,
                 },
-                body: JSON.stringify(this.IMAGE_DATA(prompt, generations, size)),
+                body: JSON.stringify(this.IMAGE_DATA(prompt, generations, size, model)),
             });
 
             const imgUrl = await response.json(); //Main response.
