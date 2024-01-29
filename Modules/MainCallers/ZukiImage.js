@@ -19,22 +19,22 @@ export class ZukiImage {
 
         /** 
          * Changes the backup endpoint to the new endpoint. 
-         */
+        */
 
         this.API_ENDPOINT_BACKUP = newEndpoint;
     }
 
 
-    async generateImage(prompt, generations = 1, size = "1024x1024") {
+    async generateImage(prompt, generations = 1, size = "1024x1024", model = "sdxl") {
 
-        return this.API_CALLER.IMAGE_CALL(prompt, generations, size, this.API_ENDPOINT);
+        return this.API_CALLER.IMAGE_CALL(prompt, generations, size, model, this.API_ENDPOINT);
 
     }
 
 
-    async generateBackupImage(prompt, generations = 1, size = "1024x1024"){
+    async generateBackupImage(prompt, generations = 1, size = "1024x1024", model = "sdxl"){
 
-        return this.API_BACKUP_CALLER.IMAGE_CALL(prompt, generations, size, this.API_ENDPOINT_BACKUP);
+        return this.API_BACKUP_CALLER.IMAGE_CALL(prompt, generations, size, model, this.API_ENDPOINT_BACKUP);
 
     }
 
