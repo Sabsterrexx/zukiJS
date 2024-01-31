@@ -9,4 +9,4 @@ The file main.js has some example code on how to use the wrapper.
 
 Currently, this repository is only meant to be used for chat completions, namely the OpenAI models. Image generation is supported as well, to some extent.
 
-While the concept of a zukijourney API might be no different than an OpenAI JavaScript wrapper, there are specific quirks of the zukijourney API that this repository handles which make it more accessible.
+While the concept of a zukijourney API wrapper might be no different than an OpenAI JavaScript wrapper, there are specific quirks of the zukijourney API that this repository handles which make it more accessible.
