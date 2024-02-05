@@ -11,12 +11,12 @@ export class ZukiChat {
 
         this.systemPrompt = systemPrompt;
 
-        let modelsList = ['gpt-3.5', 'gpt-3.5-turbo', 'gpt-3.5-4k', 'gpt-3.5-16k', 'gpt-4', 'gpt-4-4k', 'gpt-4-16k', 'claude-2'];
+        this.modelsList = ['gpt-3.5', 'gpt-3.5-turbo', 'gpt-3.5-4k', 'gpt-3.5-16k', 'gpt-4', 'gpt-4-4k', 'gpt-4-16k', 'claude-2'];
 
-        if (modelsList.includes(model))
+        if (this.modelsList.includes(model))
             this.model = model;
         else
-            throw new Error(model + " is not a valid text model!");
+            throw new Error(model + " is not a valid text model! Please choose from the following: " + this.modelsList);
 
 
         this.temperature = temperature;

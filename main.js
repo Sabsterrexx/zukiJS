@@ -29,6 +29,9 @@ let chatResponse = await zukiAI.zukiChat.sendMessage("Sabs", "Hey, how's it goin
  *  then call .zukiChat.sendBackupMessage().
  */
 
+
+//Note: If you want to use a model that the wrapper doesn't recognize, use zukAI.models_list.push("model-name");
+
 console.log("Chat Response: ", chatResponse); //Response will be printed in the console.
 //To change the temperature of the model, call .zukiChat.setTemp(). The value by default is 0.7.
 
