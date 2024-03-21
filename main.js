@@ -19,7 +19,7 @@ const API_BACKUP_KEY = ""; //Set this value to your backup API key, if you have 
 //The ZukiCall class handles sending and receiving messages to our LLM with the API.
 
 let zukiAI = new ZukiCall(API_KEY, API_BACKUP_KEY);
-//By default the chat model is gpt-3.5 if the second function parameter is not defined upon intialization.
+//By default the chat model is gpt-3.5-turbo if the second function parameter is not defined upon intialization.
 //By default the system prompt (third function parameter) is "You are a helpful assistant", this can be changed later with .zukiChat.setSystemPrompt().
 
 let chatResponse = await zukiAI.zukiChat.sendMessage("Sabs", "Hey, how's it going?");
