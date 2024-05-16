@@ -2,14 +2,8 @@
     "name": "zukijs",
     "version": "0.0.0",
     "description": "A module to interact with the ZukiJourney API",
-    "main": "index.cjs",
-    "module": "index.js",
-    "types": "index.d.ts",
+    "main": "index.js",
     "type": "module",
-    "exports": {
-        "require": "./index.cjs",
-        "import": "./index.js"
-    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -24,9 +18,7 @@
         "ZukiJourney"
     ],
     "author": {
-        "name": "todo",
-        "email": "todo",
-        "url": "todo"
+        "name": "Sabsterrexx"
     },
     "license": "Apache-2.0",
     "bugs": {
