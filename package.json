@@ -1,3 +1,28 @@
 {
-    "type": "module"
+    "name": "zukijs",
+    "version": "0.0.0",
+    "description": "A module to interact with the ZukiJourney API",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Sabsterrexx/zukiJS.git"
+    },
+    "keywords": [
+        "LLM",
+        "API",
+        "AI",
+        "ZukiJourney"
+    ],
+    "author": {
+        "name": "Sabsterrexx"
+    },
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/Sabsterrexx/zukiJS/issues"
+    },
+    "homepage": "https://github.com/Sabsterrexx/zukiJS#readme"
 }
