@@ -5,7 +5,7 @@
  * an LLM (in this case GPT-3) and a response is printed to the console.
  */
 
-import { ZukiCall } from "./Modules/ZukiCall.js";
+import { ZukiCall } from "zukijs"
 /**
  * You only need to import the ZukiCall class to access the rest of the wrapper. 
  * If JavaScript can't find the folder, make sure you have a package.json file
