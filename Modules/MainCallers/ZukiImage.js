@@ -25,14 +25,14 @@ export class ZukiImage {
     }
 
 
-    async generateImage(prompt, generations = 1, size = "1024x1024", model = "sdxl") {
+    async generateImage(prompt, generations = 1, size = "1024x1024", model = "flux-schnell") {
 
         return this.API_CALLER.IMAGE_CALL(prompt, generations, size, model, this.API_ENDPOINT);
 
     }
 
 
-    async generateBackupImage(prompt, generations = 1, size = "1024x1024", model = "sdxl"){
+    async generateBackupImage(prompt, generations = 1, size = "1024x1024", model = "flux-schnell"){
 
         return this.API_BACKUP_CALLER.IMAGE_CALL(prompt, generations, size, model, this.API_ENDPOINT_BACKUP);
 
